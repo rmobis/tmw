@@ -1,0 +1,28 @@
+- Add logout option.
+- Add sorting sidebar.
+- Add filtering sidebar.
+- Add option to add all characters from guild.
+- Add auto-refresh through AJAX using JSON.
+- Add desktop notifications.
+- Maybe rewrite ListController to make showList/editList and authShowList/authEditList simple helpers and point them to
+a single, reusable, method. [DONE]
+- Refactor all code.
+- Include full PHPDocs documentation.
+- Rewrite code to use Fluent instead of Eloquent or something even lower level.
+- Add logging functionality.
+- Add a stats page.
+- Add admin panel.
+- Make the updating utility a composer package and use it as a dependency.
+- Make sidebar collapsable.
+- Add themes option.
+- Make list responsible.
+- Make this a .md file.
+- Organize this file.
+- Add tests.
+- Stablish a build process which includes jshint, grunt, travis, etc.
+- Get PostgreSQL running.
+- Add a fragcheck utility.
+- Get a decent layout.
+- Add a queue system using beanstalkd.
+- Add option to import lists from tnuc.org.
+- Make the whole site a single page app using Ember.js or Angular.js.
