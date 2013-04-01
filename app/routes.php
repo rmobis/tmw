@@ -69,29 +69,29 @@ Route::get('/update', array(
 Route::get('/{list}/edit', array(
 	'as'	=>	'editList',
 	'uses'	=>	'ListController@editList'
-))->where('list', '[A-z]+');
+))->where('list', '[A-z0-9]+');
 
 Route::post('/{list}/add', array(
 	'as'	=>	'addCharToList',
 	'uses'	=>	'ListController@addChar'
-))->where('list', '[A-z]+');
+))->where('list', '[A-z0-9]+');
 
 Route::post('/{list}/remove', array(
 	'as'	=>	'removeCharFromList',
 	'uses'	=>	'ListController@removeChar'
-))->where('list', '[A-z]+');
+))->where('list', '[A-z0-9]+');
 
 Route::get('/{list}', array(
 	'as'	=>	'showList',
 	'uses'	=>	'ListController@showList'
-))->where('list', '[A-z]+');
+))->where('list', '[A-z0-9]+');
 
 Route::post('/{list}', array(
 	'as'	=>	'authShowList',
 	'uses'	=>	'ListController@authShowList'
-))->where('list', '[A-z]+');
+))->where('list', '[A-z0-9]+');
 
 Route::post('/{list}/edit', array(
 	'as'	=>	'authEditList',
 	'uses'	=>	'ListController@authEditList'
-))->where('list', '[A-z]+');
+))->where('list', '[A-z0-9]+');

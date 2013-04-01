@@ -232,16 +232,8 @@ class CharacterList extends Eloquent {
 	 * @return int
 	 */
 	public static function toId($value) {
-		$base = strlen(static::$base);
-		$limit = strlen($value);
-		$result = strpos(static::$base, $value[0]);
-
-		for($i = 1; $i < $limit; $i++)
-		{
-			$result = $base * $result + strpos(static::$base, $value[$i]);
-		}
-
-		return ++$result;
+		$hashid = new Hashids('9gXh45b9rIgkTeGtrS8cbRrIr69LnhLK', 8);
+		return $hashid->decrypt($value)[0];
 	}
 
 	/**
@@ -251,19 +243,7 @@ class CharacterList extends Eloquent {
 	 * @return string
 	 */
 	public static function toHash($value) {
-		$value--;
-		$base = strlen(static::$base);
-		$r = $value  % $base;
-		$result = static::$base[$r];
-		$q = floor($value / $base);
-
-		while ($q)
-		{
-			$r = $q % $b;
-			$q = floor($q / $base);
-			$result = static::$base[$r].$result;
-		}
-
-		return $result;
+		$hashid = new Hashids('9gXh45b9rIgkTeGtrS8cbRrIr69LnhLK', 8);
+		return $hashid->encrypt($value);
 	}
 }

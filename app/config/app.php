@@ -134,6 +134,7 @@ return array(
 
 		'Basset'          => 'Basset\Facades\Basset',
 		'Former'          => 'Former\Facades\Illuminate',
+		'Hashids'         => 'Hashids\Hashids',
 		'Profiler'        => 'Profiler\Facades\Profiler',
 
 		'App'             => 'Illuminate\Support\Facades\App',
