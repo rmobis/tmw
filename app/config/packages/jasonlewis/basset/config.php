@@ -108,7 +108,11 @@ return array(
 
 			// Gotta load jQuery and Migrate first, as other plugins rely on it
 			$col->requireDirectory('assets/website/js')
-				->only(array('assets/website/js/jquery.js', 'assets/website/js/jquery.migrate.js'))
+				->only(array('assets/website/js/jquery.js'))
+				->apply('ClosureAPI');
+
+			$col->requireDirectory('assets/website/js')
+				->only(array('assets/website/js/jquery.migrate.js'))
 				->apply('ClosureAPI');
 
 			$col->requireDirectory('assets/website/js')
