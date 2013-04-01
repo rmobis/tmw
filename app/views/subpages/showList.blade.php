@@ -66,8 +66,7 @@
 			@if (count($chars) === 0)
 				<p class="text-center">
 					@if (!$edit)
-						{{--<a href="{{ URL::route('editList', array($list->hash)) }}">--}}
-						{{ $list->hash }}
+						{<a href="{{ URL::route('editList', array($list->hash)) }}">
 					@endif
 							This list seems to be empty! Why don't you add a few characters to it?
 					@if (!$edit)
