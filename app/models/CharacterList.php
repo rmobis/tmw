@@ -233,7 +233,8 @@ class CharacterList extends Eloquent {
 	 */
 	public static function toId($value) {
 		$hashid = new Hashids('9gXh45b9rIgkTeGtrS8cbRrIr69LnhLK', 8);
-		return $hashid->decrypt($value)[0];
+		$ids = $hashid->decrypt($value)
+		return $ids[0];
 	}
 
 	/**
