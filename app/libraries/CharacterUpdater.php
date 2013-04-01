@@ -108,7 +108,8 @@ class CharacterUpdater {
 
 		foreach ($nodes as $node) {
 			$char = array();
-			$children = (new Crawler($node))->children();
+			$crawler = new Crawler($node);
+			$children = $crawler->children();
 
 			// We use the last <a> tag because some items may have more than
 			// one, as they're used by Tibia website to link to the characters
@@ -212,7 +213,8 @@ class CharacterUpdater {
 		$char = array();
 
 		foreach ($rows as $row) {
-			$children = (new Crawler($row))->children();
+			$crawler = new Crawler($row);
+			$children = $crawler->children();
 			$label = static::normalizeString(trim($children->first()->text(), ':'));
 			$valueNode = $children->last();
 
